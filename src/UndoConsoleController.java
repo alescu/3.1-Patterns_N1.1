@@ -2,17 +2,17 @@ import java.util.Scanner;
 import java.util.Stack;
 import java.util.EmptyStackException;
 
-public class SingletonCtrl {
+public class UndoConsoleController {
 
-    private static SingletonCtrl instance = null;
+    private static UndoConsoleController instance = null;
     private static Stack<String> stackList = new Stack<String>();;
 
-    private SingletonCtrl() {
+    private UndoConsoleController() {
     }
 
-    public static SingletonCtrl getInstance() {
+    public static UndoConsoleController getInstance() {
         if (instance == null) {
-            instance = new SingletonCtrl();
+            instance = new UndoConsoleController();
         }
         return instance;
     }
@@ -30,7 +30,7 @@ public class SingletonCtrl {
         do {
             if (strIn.equals("d")) {
                 delValue();
-            } else {
+            }else if (!strIn.isEmpty()) {
                 stackList.add(strIn);
             }
             System.out.println(stackList.reversed().toString());

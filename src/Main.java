@@ -17,10 +17,10 @@ public class Main {
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
-        SingletonCtrl singletonCtrl = SingletonCtrl.getInstance();
+        UndoConsoleController singletonCtrl = UndoConsoleController.getInstance();
         singletonCtrl.startConsoleReader();
 
-        SingletonCtrl singletonCtrl2 = SingletonCtrl.getInstance();
+        UndoConsoleController singletonCtrl2 = UndoConsoleController.getInstance();
         singletonCtrl2.startConsoleReader();
 
     }
