@@ -17,9 +17,11 @@ public class Main {
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
+        System.out.println("Running 1: ");
         UndoConsoleController singletonCtrl = UndoConsoleController.getInstance();
         singletonCtrl.startConsoleReader();
 
+        System.out.println("Running 2: ");
         UndoConsoleController singletonCtrl2 = UndoConsoleController.getInstance();
         singletonCtrl2.startConsoleReader();
 

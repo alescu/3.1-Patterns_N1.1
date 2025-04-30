@@ -30,6 +30,8 @@ public class UndoConsoleController {
         do {
             if (strIn.equals("d")) {
                 delValue();
+            }else if (strIn.equals("q")) {
+                return;
             }else if (!strIn.isEmpty()) {
                 stackList.add(strIn);
             }
@@ -41,11 +43,12 @@ public class UndoConsoleController {
     }
 
     private static void delValue() {
-        try {
+        if(!stackList.isEmpty()){
             stackList.pop();
-        } catch (EmptyStackException e) {
-            System.out.println("The list is empty.");
+        }else{
+            System.out.println(" The list is empty");
         }
+
     }
 
 }
